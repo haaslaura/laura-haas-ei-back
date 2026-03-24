@@ -6,15 +6,18 @@ const rateLimit = require("express-rate-limit");
 const emailRoutes = require("./routes/email")
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT;
+const FRONTEND_URL = process.env.FRONTEND_URL;
+const MAILER_API_URL = process.env.MAILER_API_URL;
+
 
 app.use(express.json());
 app.set('trust proxy', 1);  // Trust 'X-Forwarded-*' headers
 
+
 // Prevent requests from other sites
-// app.use(cors()); // local env
 app.use(cors({
-    origin: "https://laura-haas.dev",
+    origin: FRONTEND_URL,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
 }));
@@ -35,5 +38,4 @@ app.use("/send", limiter);
 app.use("/send", emailRoutes);
 
 // Start the server
-// app.listen(PORT, () => console.log(`Serveur en écoute sur http://localhost:${PORT}`));
-app.listen(PORT, () => console.log(`Serveur en écoute sur https://api.mailer.laura-haas.dev:${PORT}`));
+app.listen(PORT, () => console.log(`Serveur en écoute sur ${MAILER_API_URL}:${PORT}`));
