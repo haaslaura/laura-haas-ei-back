@@ -3,10 +3,11 @@
  */
 const fs = require("fs");
 
-function logEmail({ name, email, phone, message }) {
+function logEmail({ firstname, lastname, email, phone, message }) {
     const logEntry = `
   [${new Date().toISOString()}]
-  Nom : ${name}
+  Prénom : ${firstname}
+  Nom : ${lastname}
   Email : ${email}
   Téléphone : ${phone}
   Message : ${message}
