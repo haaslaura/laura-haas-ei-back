@@ -11,7 +11,7 @@ It allows you to receive emails from a contact form. A route is set up for sendi
 - **Node.js** – JavaScript runtime environment 
 - **Express** – Framework for Node.js
 - **nodemailer** - Node.js module for sending email
-- **Brevo** - relay SMTP for sending Nodemailer emails 
+- **Brevo** (ex-Sendinblue) - SMTP relay platform used to send emails reliably and avoid spam filters
 - **express-rate-limit** - Limits the number of admissible emails per minute
 - **validator** - Sanitize the contact form fields
 
@@ -25,7 +25,18 @@ To run the project locally:
 2. Install dependencies:
 `npm install`
 
-3. Start the development server:
+3. Create a .env with :
+
+```
+EMAIL_USER=your_email
+BREVO_SMTP_USER=your_brevo_auth_user
+EMAIL_PASS=private_key
+PORT=your_port_server
+FRONTEND_URL=your_front_url
+MAILER_API_URL=your_mailer_api
+```
+
+4. Start the development server:
 `npm run start`
 
 ## 🎨 Front-end part
