@@ -11,6 +11,7 @@ It allows you to receive emails from a contact form. A route is set up for sendi
 - **Node.js** – JavaScript runtime environment 
 - **Express** – Framework for Node.js
 - **nodemailer** - Node.js module for sending email
+- **Brevo** - relay SMTP for sending Nodemailer emails 
 - **express-rate-limit** - Limits the number of admissible emails per minute
 - **validator** - Sanitize the contact form fields
 
@@ -19,7 +20,7 @@ It allows you to receive emails from a contact form. A route is set up for sendi
 To run the project locally:  
 
 1. Clone the repository:  
-`git clone https://github.com/haaslaura/portfolio2025backend.git`
+`git clone https://github.com/haaslaura/laura-haas-ei-back.git`
 
 2. Install dependencies:
 `npm install`
@@ -28,7 +29,8 @@ To run the project locally:
 `npm run start`
 
 ## 🎨 Front-end part
-You can find the Front-end project and any informations about it [here](https://github.com/haaslaura/portfolio2025).
+
+You can find the Front-end project and any informations about it at (https://github.com/haaslaura/laura-haas-ei-front).
 
 ## 📬 Contact
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/laurahaas-developpement/) if you have any questions or feedback!
